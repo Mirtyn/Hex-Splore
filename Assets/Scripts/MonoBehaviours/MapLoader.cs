@@ -8,8 +8,8 @@ using Unity.Rendering;
 
 public class MapLoader : MonoBehaviour
 {
-    private int XSize = 6;
-    private int YSize = 6;
+    private int XSize = 16;
+    private int YSize = 16;
 
     private void Start()
     {
@@ -130,4 +130,5 @@ public struct TileMapBlobAsset
     public int XSize;
     public int YSize;
     public BlobArray<Entity> Map;
+    //public BlobArray<TileType> TileTypeMap;
 }

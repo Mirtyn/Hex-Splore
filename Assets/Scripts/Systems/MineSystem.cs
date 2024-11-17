@@ -22,16 +22,16 @@ partial struct MineSystem : ISystem
             SystemAPI.SetComponentEnabled<MaterialMeshInfo>(tile.ValueRO.SideZ, false);
             SystemAPI.SetComponentEnabled<MaterialMeshInfo>(tile.ValueRO.TopSide, false);
 
-            var physicsCollider = SystemAPI.GetComponentRW<PhysicsCollider>(entity);
+            //var physicsCollider = SystemAPI.GetComponentRW<PhysicsCollider>(entity);
 
-            unsafe
-            {
-                BoxCollider* BoxColliderPtr = (BoxCollider*)physicsCollider.ValueRO.ColliderPtr;
-                BoxGeometry boxGeom = BoxColliderPtr->Geometry;
-                boxGeom.Size = mined.ValueRO.MinedTileColliderScale;
-                boxGeom.Center = mined.ValueRO.MinedTileColliderOffset;
-                BoxColliderPtr->Geometry = boxGeom;
-            }
+            //unsafe
+            //{
+            //    BoxCollider* BoxColliderPtr = (BoxCollider*)physicsCollider.ValueRO.ColliderPtr;
+            //    BoxGeometry boxGeom = BoxColliderPtr->Geometry;
+            //    boxGeom.Size = mined.ValueRO.MinedTileColliderScale;
+            //    boxGeom.Center = mined.ValueRO.MinedTileColliderOffset;
+            //    BoxColliderPtr->Geometry = boxGeom;
+            //}
         }
     }
 }
